@@ -42,8 +42,15 @@ Product targets: Delta FieldLAS, Signum 75W and Signum 50W live URLs
 3. Six verified features, installation notes and suitable applications
 4. Two line-marking projects, explicitly identified as MightyLine tape projects
 5. Three related products, including in-file navigation between projector mock-ups
+6. Free site inspection band closing the category page and every product page
 
 No enquiry form, speculative performance claim, invented specification or unverified FieldLAS case study is included.
+
+## Free site inspection band
+
+The red band at the foot of both views matches the component used on the line marking tape mock-up, with the offer changed to suit the product. Tape can be sampled by post; a projector cannot, and the Signum product copy already promises a free site inspection, so the band offers that instead. Primary action goes to `/request-quote/`, secondary is the phone number.
+
+This is the only place on the page where a projector buyer is asked to do something other than add to cart, which matters on a $2,250 to $3,200 item that Cotewell asks people to call about before purchasing.
 
 ## Signum positioning used
 

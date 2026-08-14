@@ -1,3 +1,6 @@
 .DS_Store
 Thumbs.db
 *.zip
+
+# Scratch folder left by the sandboxed git tooling; safe to delete.
+_git_lock_trash/

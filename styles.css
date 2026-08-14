@@ -651,3 +651,25 @@ h1, h2, h3 { font-family: "Archivo", sans-serif; }
   *, *::before, *::after { scroll-behavior: auto !important; animation: none !important; transition: none !important; }
   .reveal { opacity: 1; transform: none; }
 }
+
+/* ------------------------------------------------------- free site inspection band */
+.sample-band { padding: 66px 0; background: var(--red); color: var(--white); }
+.sample-band__inner { display: grid; grid-template-columns: 1.2fr auto; gap: 46px; align-items: center; }
+.sample-band .eyebrow { color: rgba(255,255,255,.78); }
+.sample-band .eyebrow span { background: var(--white); }
+.sample-band h2 { margin: 0; font-size: clamp(32px, 3.6vw, 46px); line-height: .98; letter-spacing: -.035em; text-transform: uppercase; }
+.sample-band p { max-width: 62ch; margin: 14px 0 0; color: rgba(255,255,255,.84); font-size: 14.5px; line-height: 1.6; }
+.sample-band__actions { display: flex; flex-wrap: wrap; gap: 10px; }
+.sample-band .button--red { background: var(--white); color: var(--red); }
+.sample-band .button--red:hover { background: var(--ink); color: var(--white); }
+.sample-band .button--outline { border-color: rgba(255,255,255,.55); }
+.sample-band .button--outline:hover { background: var(--white); color: var(--red); }
+
+@media (max-width: 920px) {
+  .sample-band__inner { grid-template-columns: 1fr; gap: 26px; }
+}
+
+@media (max-width: 680px) {
+  .sample-band { padding: 52px 0; }
+  .sample-band__actions { display: grid; grid-template-columns: 1fr; width: 100%; }
+}
