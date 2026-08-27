@@ -286,7 +286,7 @@
       img: UP + '2023/04/Projected-Line-Example.jpg',
       alt: 'Bright projected safety line running down a warehouse aisle',
       tag: 'Projected line marking',
-      title: 'A line that never needs re-taping.',
+      title: 'Signum Projected Safety Marking – 50W',
       copy: 'There is nothing on the floor to wear away, so the line stays as bright on day one thousand as it was on day one.',
       href: 'https://cotewell.com.au/product/signum-projected-safety-marking-50w/',
       link: 'View the Signum range'
@@ -295,7 +295,7 @@
       img: UP + '2022/08/20190802_174231.jpg',
       alt: 'Projected pedestrian crossing marked onto an outdoor surface',
       tag: 'Pedestrian crossings',
-      title: 'Crossings on surfaces paint will not hold.',
+      title: 'Customer Story | This Customer Tried Everything',
       copy: 'Rough, worn and patched surfaces are where painted lines break up first. A projected crossing does not touch the surface at all.',
       href: 'https://cotewell.com.au/customer-story-this-customer-tried-everything/',
       link: 'Read the customer story'
@@ -304,7 +304,7 @@
       img: UP + '2023/04/gobo-projekce-projection247-signage-znacky-e1757482151830.jpg',
       alt: 'Projected stop sign on a warehouse floor',
       tag: 'Activated projection',
-      title: 'A stop sign that appears when it matters.',
+      title: 'Activated Projectors: Improving Warehouse Safety with Real-Time Visual Warnings',
       copy: 'Sensors detect an approaching forklift or pedestrian and the warning appears on the ground, then clears once the area is empty.',
       href: 'https://cotewell.com.au/activated-projectors-improving-warehouse-safety-with-real-time-visual-warnings/',
       link: 'How activated projectors work'
@@ -313,7 +313,7 @@
       img: UP + '2023/04/safety-signage_projection_idvum_signium.jpg',
       alt: 'Projected safety signage across several industrial settings',
       tag: 'Customised GOBO designs',
-      title: 'Your symbols, your colours, your layout.',
+      title: 'Pro’s & Con’s of our Laser Line Marking & Safety Signage Projectors',
       copy: 'Customised safety signs and symbols are available to suit the workplace, from exclusion zones to directional arrows and warning messages.',
       href: 'https://cotewell.com.au/pros-cons-of-our-laser-line-marking-safety-signage-projectors/',
       link: 'Pros and cons of projectors'

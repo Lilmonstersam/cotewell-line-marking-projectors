@@ -301,6 +301,10 @@ h1, h2, h3 { font-family: "Archivo", sans-serif; }
 .category-hero__description { padding-bottom: 7px; }
 .category-hero__description p { max-width: 45ch; margin: 0; color: rgba(255,255,255,.78); font-size: 16px; line-height: 1.62; }
 .category-hero__description p + p { margin-top: 14px; color: rgba(255,255,255,.54); font-size: 14px; }
+.hero-proof { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; max-width: 600px; margin: 24px 0 0; }
+.hero-proof__card { display: flex; flex-direction: column; gap: 4px; min-width: 0; padding: 13px 14px; border: 1px solid rgba(255,255,255,.18); background: rgba(255,255,255,.055); }
+.hero-proof__card strong { color: var(--white); font-family: "Archivo", sans-serif; font-size: 20px; line-height: 1; letter-spacing: -.025em; }
+.hero-proof__card span { color: rgba(255,255,255,.62); font-family: "IBM Plex Mono", monospace; font-size: 8.5px; line-height: 1.3; letter-spacing: .08em; text-transform: uppercase; }
 
 .category-products { padding-top: 76px; }
 .category-products__head {
@@ -667,6 +671,8 @@ h1, h2, h3 { font-family: "Archivo", sans-serif; }
   .category-hero h1 { font-size: clamp(42px, 12vw, 54px); }
   .category-hero__description p { font-size: 14px; }
   .category-hero__description p + p { font-size: 13px; }
+  .hero-proof { grid-template-columns: 1fr; max-width: none; gap: 6px; margin-top: 18px; }
+  .hero-proof__card { min-height: 58px; padding: 11px 13px; }
   .category-products { padding-top: 54px; }
   .category-products__head { margin-bottom: 27px; }
   .category-products__head h2 { font-size: 38px; }
