@@ -4,3 +4,4 @@ Thumbs.db
 
 # Scratch folder left by the sandboxed git tooling; safe to delete.
 _git_lock_trash/
+.fuse_hidden*
