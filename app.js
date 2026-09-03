@@ -48,6 +48,8 @@
 
   var productData = {
     'delta-fieldlas': {
+      brochure: 'assets/brochures/delta-fieldlas-projector-brochure-2026.pdf',
+      brochureLabel: 'Delta FieldLAS',
       badge: 'Laser line · IP67',
       cardType: 'Bright laser floor lines',
       cardCopy: 'Crisp, adjustable laser lines for walkways and traffic separation, built for dusty, dirty or wet floors where markings deteriorate quickly.',
@@ -85,7 +87,7 @@
         ['Adjustable projection', 'Update the line length and thickness to suit changing site requirements.'],
         ['Long-lasting laser source', 'A durable diode source designed for improved reliability.'],
         ['IP67-rated enclosure', 'Built for dusty, dirty and wet industrial environments.'],
-        ['Quick installation', 'No operational downtime is required during installation.'],
+        ['Quick installation', 'Minimal downtime during installation, with no curing time.'],
         ['360° adjustable mounting', 'Reposition the projected line with precision as the layout evolves.']
       ],
       notes: [
@@ -102,7 +104,7 @@
       related: ['signum-75w', 'signum-50w', 'mightyline']
     },
     'signum-75w': {
-      brochure: 'https://cotewell.com.au/wp-content/uploads/2026/01/Signum-Projected-Safety-Marking-Brochure.pdf',
+      brochure: 'assets/brochures/signum-projected-safety-marking-brochure-2026.pdf',
       brochureLabel: 'Signum',
       photos: [
         { src: UP + '2023/04/Projected-Line-Example.jpg', alt: 'Bright projected safety line running down a warehouse aisle' },
@@ -118,7 +120,7 @@
       shortName: 'Signum 75W',
       breadcrumb: 'Signum 75W',
       title: 'Signum 75W Safety Sign Projector | Cotewell',
-      descriptionMeta: 'Signum 75W projects bright safety lines, warning signs and customised symbols that stay visible on dirty and worn industrial floors. IP65, 50,000 hour LED, 5 year warranty.',
+      descriptionMeta: 'Signum 75W projects bright safety lines, warning signs and customised symbols that stay visible on dirty and worn industrial floors. IP65, 50,000 hour LED, 2 year warranty.',
       canonical: 'https://cotewell.com.au/product/signum-projected-safety-marking-75w/',
       eyebrow: 'Projected safety marking · 75W',
       titleHtml: 'Signum<br><em>Projected Safety</em><br>Marking – 75W',
@@ -128,7 +130,7 @@
       heroSpecs: [
         ['LED lifespan', '50,000 hrs'],
         ['Protection', 'IP65'],
-        ['Warranty', '5 years']
+        ['Warranty', '2 years']
       ],
       image: 'assets/img/signum-safety-projector.png',
       imageAlt: 'Signum Projected Safety Marking 75W projector',
@@ -149,7 +151,7 @@
         ['Projects onto any surface', 'Visible guidance that will not wear under daily operations.'],
         ['50,000-hour LED lifespan', 'Long service life, with reduced output beyond the rated period.'],
         ['IP65 protection', 'Designed for harsh industrial environments and temperature extremes.'],
-        ['Five-year warranty', 'Long-term support for the projector system.']
+        ['Two-year warranty', 'Long-term support for the projector system.']
       ],
       notes: [
         'Not suitable for applications in full sunlight',
@@ -166,7 +168,7 @@
       related: ['signum-50w', 'delta-fieldlas', 'mightyline']
     },
     'signum-50w': {
-      brochure: 'https://cotewell.com.au/wp-content/uploads/2026/01/Signum-Projected-Safety-Marking-Brochure.pdf',
+      brochure: 'assets/brochures/signum-projected-safety-marking-brochure-2026.pdf',
       brochureLabel: 'Signum',
       photos: [
         { src: UP + '2023/04/gobo-projekce-projection247-signage-znacky-e1757482151830.jpg', alt: 'Projected stop sign on a warehouse floor' },
@@ -182,7 +184,7 @@
       shortName: 'Signum 50W',
       breadcrumb: 'Signum 50W',
       title: 'Signum 50W Safety Sign Projector | Cotewell',
-      descriptionMeta: 'Signum 50W projects bright safety lines, warning signs and customised symbols that stay visible on dirty and worn industrial floors. IP65, 50,000 hour LED, 5 year warranty.',
+      descriptionMeta: 'Signum 50W projects bright safety lines, warning signs and customised symbols that stay visible on dirty and worn industrial floors. IP65, 50,000 hour LED, 2 year warranty.',
       canonical: 'https://cotewell.com.au/product/signum-projected-safety-marking-50w/',
       eyebrow: 'Projected safety marking · 50W',
       titleHtml: 'Signum<br><em>Projected Safety</em><br>Marking – 50W',
@@ -192,7 +194,7 @@
       heroSpecs: [
         ['LED lifespan', '50,000 hrs'],
         ['Protection', 'IP65'],
-        ['Warranty', '5 years']
+        ['Warranty', '2 years']
       ],
       image: 'assets/img/signum-50w.png',
       imageAlt: 'Signum Projected Safety Marking 50W projector',
@@ -213,7 +215,7 @@
         ['Projects onto any surface', 'Visible guidance that will not wear under daily operations.'],
         ['50,000-hour LED lifespan', 'Long service life, with reduced output beyond the rated period.'],
         ['IP65 protection', 'Designed for harsh industrial environments and temperature extremes.'],
-        ['Five-year warranty', 'Long-term support for the projector system.']
+        ['Two-year warranty', 'Long-term support for the projector system.']
       ],
       notes: [
         'Not suitable for applications in full sunlight',
@@ -276,9 +278,9 @@
   var ORDER = ['signum-75w', 'signum-50w', 'delta-fieldlas'];
 
   var COMPARE_ROWS = [
-    { key: 'signum-75w',     projects: 'Safety lines, warning signs, custom symbols', ip: 'IP65', life: '50,000 hr LED', warranty: '5 years',   gobo: 'Required' },
-    { key: 'signum-50w',     projects: 'Safety lines, warning signs, custom symbols', ip: 'IP65', life: '50,000 hr LED', warranty: '5 years',   gobo: 'Required' },
-    { key: 'delta-fieldlas', projects: 'Adjustable laser floor lines',                ip: 'IP67', life: 'Diode laser',   warranty: 'On request', gobo: 'Not used' }
+    { key: 'signum-75w',     projects: 'Safety lines, warning signs, custom symbols', ip: 'IP65', life: '50,000 hr LED', warranty: '2 years', gobo: 'Required' },
+    { key: 'signum-50w',     projects: 'Safety lines, warning signs, custom symbols', ip: 'IP65', life: '50,000 hr LED', warranty: '2 years', gobo: 'Required' },
+    { key: 'delta-fieldlas', projects: 'Adjustable laser floor lines',                ip: 'IP67', life: 'Diode laser',   warranty: '2 years', gobo: 'Not used' }
   ];
 
   var ACTION_CARDS = [
@@ -320,6 +322,27 @@
     }
   ];
 
+  /* Video library, split so the pros/cons pair reads as a pair and the two
+     shorts sit alongside them. Orientation drives the thumbnail aspect. */
+  var VIDEOS = [
+    { id: 'BtRwiznpibk', href: 'https://www.youtube.com/watch?v=BtRwiznpibk',
+      tag: 'The case for', format: 'Video',
+      title: "Pro's of Our Laser Line Marking & Safety Signage Projectors",
+      copy: 'Where projection outperforms paint and tape, and the sites that get the most out of it.' },
+    { id: 'AguKdMXljAg', href: 'https://www.youtube.com/watch?v=AguKdMXljAg',
+      tag: 'The case against', format: 'Video',
+      title: "Con's of Our Laser Line Marking & Safety Signage Projectors",
+      copy: 'The honest limitations: sunlight, projection range, electrical work and where a projector is the wrong call.' },
+    { id: '42TXkCO9rMs', href: 'https://youtube.com/shorts/42TXkCO9rMs',
+      tag: 'Activated projection', format: 'Short', portrait: true,
+      title: 'Activated Projector Markings | For Busy Warehouses',
+      copy: 'The marking appears the moment a forklift or pedestrian is detected, then clears once the area is empty.' },
+    { id: 'n4VH_JL10y4', href: 'https://youtube.com/shorts/n4VH_JL10y4',
+      tag: 'Motion sensor', format: 'Short', portrait: true,
+      title: 'Signum Warning Sign Projector | Motion Sensor',
+      copy: 'A Signum warning sign triggered by motion, so the message only lands when there is something to warn about.' }
+  ];
+
   var FAQS = [
     { q: 'How long do projected line markings last?',
       a: 'The projector is rated for a 50,000 hour LED life-span, which works out at roughly six years running 24/7, or close to twelve years if it is only on twelve hours a day. It will keep running beyond that, at reduced output. Because nothing is applied to the floor, the marking itself never wears, chips or fades.' },
@@ -334,7 +357,7 @@
     { q: 'What are the limitations we should know about?',
       a: 'They are not suitable for applications in full sunlight. Each unit has a defined projection range, so larger or more complex sites may need multiple units. Hard wiring must be completed by a qualified electrician, and additional electrical infrastructure may be required. Every projection system is customised to suit the workplace, so there is no one size fits all.' },
     { q: 'How much downtime does installation cause?',
-      a: 'None once the unit is in. There is no operational downtime during installation and no curing time to wait out, so operations continue as normal. Signum units also need minimal ongoing maintenance, which is why we describe them as fit and forget.' },
+      a: 'There is minimal downtime during installation. There is no curing time to wait out, so operations continue much as normal. Signum units also need minimal ongoing maintenance, which is why we describe them as fit and forget.' },
     { q: 'Do I need a GOBO?',
       a: 'Each Signum projector needs to be purchased with a GOBO, which is the customised element that forms the projected image. Call 1300 590 505 before ordering so we can discuss GOBO options and arrange a free onsite demo. The Delta FieldLAS projects a laser line and does not use one.' }
   ];
@@ -390,6 +413,26 @@
         '</a>';
       }).join('');
       action.dataset.rendered = '1';
+    }
+
+    var videos = document.querySelector('[data-video-grid]');
+    if (videos && !videos.dataset.rendered) {
+      videos.innerHTML = VIDEOS.map(function (v) {
+        return '<a class="video-card reveal' + (v.portrait ? ' video-card--short' : '') + '" href="' + v.href + '" target="_blank" rel="noopener">' +
+          '<span class="video-card__media">' +
+            '<img src="https://i.ytimg.com/vi/' + v.id + '/hqdefault.jpg" alt="" loading="lazy">' +
+            '<span class="video-card__shade" aria-hidden="true"></span>' +
+            '<span class="video-card__play" aria-hidden="true">&#9654;</span>' +
+            '<span class="video-card__format mono">' + v.format + '</span>' +
+          '</span>' +
+          '<span class="video-card__copy">' +
+            '<span class="mono">' + v.tag + '</span>' +
+            '<b>' + v.title + '</b>' +
+            '<span class="video-card__blurb">' + v.copy + '</span>' +
+            '<span class="text-link text-link--dark">Watch on YouTube &#8599;</span>' +
+          '</span></a>';
+      }).join('');
+      videos.dataset.rendered = '1';
     }
 
     var faq = document.querySelector('[data-faq-list]');
