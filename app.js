@@ -50,6 +50,7 @@
     'delta-fieldlas': {
       brochure: 'assets/brochures/delta-fieldlas-projector-brochure-2026.pdf',
       brochureLabel: 'Delta FieldLAS',
+      brochureMeta: 'PDF · 163 KB · features, specifications and limitations',
       badge: 'Laser line · IP67',
       cardType: 'Bright laser floor lines',
       cardCopy: 'Crisp, adjustable laser lines for walkways and traffic separation, built for dusty, dirty or wet floors where markings deteriorate quickly.',
@@ -106,9 +107,10 @@
     'signum-75w': {
       brochure: 'assets/brochures/signum-projected-safety-marking-brochure-2026.pdf',
       brochureLabel: 'Signum',
+      brochureMeta: 'PDF · 1.5 MB · features, specifications and case studies',
       photos: [
         { src: UP + '2023/04/Projected-Line-Example.jpg', alt: 'Bright projected safety line running down a warehouse aisle' },
-        { src: UP + '2022/08/20190802_174231.jpg', alt: 'Projected pedestrian crossing marked onto an outdoor surface' },
+        { src: UP + '2022/08/20190802_174231.jpg', alt: 'Projected warning signs at the Toll warehouse' },
         { src: UP + '2023/04/gobo-projekce-projection247-signage-znacky-e1757482151830.jpg', alt: 'Projected stop sign on a warehouse floor' },
         { src: UP + '2023/04/safety-signage_projection_idvum_signium.jpg', alt: 'Projected safety signage across several industrial settings' },
         { src: UP + '2023/04/proiezione.jpg', alt: 'Signum projection beside racking in a production area' },
@@ -170,6 +172,7 @@
     'signum-50w': {
       brochure: 'assets/brochures/signum-projected-safety-marking-brochure-2026.pdf',
       brochureLabel: 'Signum',
+      brochureMeta: 'PDF · 1.5 MB · features, specifications and case studies',
       photos: [
         { src: UP + '2023/04/gobo-projekce-projection247-signage-znacky-e1757482151830.jpg', alt: 'Projected stop sign on a warehouse floor' },
         { src: UP + '2023/04/Projected-Line-Example.jpg', alt: 'Bright projected safety line running down a warehouse aisle' },
@@ -290,16 +293,16 @@
       tag: 'Projected line marking',
       title: 'Signum Projected Safety Marking – 50W',
       copy: 'There is nothing on the floor to wear away, so the line stays as bright on day one thousand as it was on day one.',
-      href: 'https://cotewell.com.au/product/signum-projected-safety-marking-50w/',
-      link: 'View the Signum range'
+      href: '#signum-50w',
+      link: 'View the Product'
     },
     {
-      img: UP + '2022/08/20190802_174231.jpg',
+      img: 'assets/img/unknown-project-pics-toll-3.jpg',
       alt: 'Projected pedestrian crossing marked onto an outdoor surface',
       tag: 'Pedestrian crossings',
-      title: 'Customer Story | This Customer Tried Everything',
-      copy: 'Rough, worn and patched surfaces are where painted lines break up first. A projected crossing does not touch the surface at all.',
-      href: 'https://cotewell.com.au/customer-story-this-customer-tried-everything/',
+      title: 'Projected warning signs at Toll',
+      copy: '52 sensor-activated Signum STOP signs at Toll’s Kemps Creek warehouse.',
+      href: 'https://cotewell.com.au/case-study-projected-warning-signs-at-a-toll-warehouse/',
       link: 'Read the customer story'
     },
     {
@@ -384,7 +387,7 @@
             '<h3>' + p.shortName + '</h3>' +
             '<p>' + p.cardCopy + '</p>' +
             '<div class="tape-card__footer"><strong>' + money(p.priceFrom) + ' <small>+ GST</small></strong>' +
-            '<span>View mock-up <b>&rarr;</b></span></div>' +
+            '<span>View the Product <b>&rarr;</b></span></div>' +
           '</div>' +
         '</a>';
       }).join('');
@@ -535,16 +538,18 @@
     if (!product.brochure) { brochureCta.hidden = true; return; }
     brochureCta.hidden = false;
     brochureCta.href = product.brochure;
+    /* The file ships with the mock-up, so save it rather than opening a viewer tab. */
+    brochureCta.setAttribute('download', '');
     var t = brochureCta.querySelector('[data-brochure-title]');
     var m = brochureCta.querySelector('[data-brochure-meta]');
     if (t) t.textContent = 'Download the ' + product.brochureLabel + ' brochure';
-    if (m) m.textContent = 'PDF · features, limitations and case studies';
+    if (m) m.textContent = product.brochureMeta || 'PDF';
   }
 
   function renderHeroSpecs(product) {
     if (!specStrip) return;
     var specs = product.heroSpecs || [];
-    specStrip.hidden = !specs.length;
+    specStrip.hidden = true;
     specStrip.innerHTML = specs.map(function (spec) {
       return '<span><b>' + spec[1] + '</b>' + spec[0] + '</span>';
     }).join('');

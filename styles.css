@@ -1298,3 +1298,18 @@ h1, h2, h3 { font-family: "Archivo", sans-serif; }
   .video-grid { grid-template-columns: 1fr; }
   .alt-cta .button { width: 100%; justify-content: center; }
 }
+
+/* Asana review: retain the layout with red accents and separate notes. */
+.category-hero__copy > .eyebrow { margin-top: 28px; }
+.hero-video__frame video { display:block; width:100%; height:100%; object-fit:cover; }
+.spec-strip[hidden] { display:none !important; }
+.features-wrap .feature:nth-child(n) { border-top-color:var(--red); }
+.features-wrap .feature:nth-child(n) > span { background:var(--red); }
+.features-wrap .applications strong, .features-wrap .applications li::before { color:var(--red); }
+.limitations ul { display:block; }
+.limitations li + li { margin-top:8px; }
+.faq-item summary, .faq-item[open] summary { color:var(--red); }
+.video-card__media { aspect-ratio:16/9; }
+.video-card__media img { width:100%; height:100%; object-fit:contain; }
+
+.hero-video__caption { margin-top:44px; position:relative; z-index:1; }
