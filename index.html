@@ -42,52 +42,59 @@
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <div class="mockup-bar">
-    <div class="shell mockup-bar__inner">
-      <span class="status-dot" aria-hidden="true"></span>
-      <strong>SEO + CRO mock-up</strong>
-      <span>Projector category + 3 product pages</span>
-      <span class="mockup-bar__meta">Product template · 14 Aug 2026</span>
-    </div>
-  </div>
 
-  <header class="site-header" data-header>
-    <div class="shell utility-nav">
-      <div class="utility-links">
-        <span>Brisbane · Sydney · Melbourne</span>
-        <span class="utility-divider" aria-hidden="true">|</span>
-        <a href="https://cotewell.com.au/our-story/">Our story</a>
-        <a href="https://cotewell.com.au/video-gallery/">Testimonials</a>
-        <a href="https://cotewell.com.au/video-gallery/">Case studies</a>
-        <a href="https://cotewell.com.au/learning-centre/">Learning centre</a>
-        <a href="https://cotewell.com.au/how-can-we-help/">How can we help?</a>
-        <a class="utility-sample" href="https://cotewell.com.au/request-free-sample/">Free tape samples</a>
-      </div>
-      <div class="utility-contact">
-        <a href="tel:1300590505">1300 590 505</a>
-        <a href="mailto:enquiries@cotewell.com.au">enquiries@cotewell.com.au</a>
+
+  <header class="site-header" data-header data-site-header>
+
+    <!-- Utility bar (top strip) -->
+    <div class="utility">
+      <div class="shell utility__inner">
+        <div class="utility__links">
+          <a href="/our-story/">About Us</a>
+          <div class="learning-menu">
+            <button type="button" aria-expanded="false">Learning Centre</button>
+            <div class="submenu">
+              <a href="/learning-centre/#articles">Articles</a>
+              <a href="/video-gallery/">Case studies</a>
+              <a href="/video-gallery/">Videos</a>
+            </div>
+          </div>
+          <a href="/request-free-sample/">Free Tape Samples</a>
+        </div>
+        <div class="utility__contact">
+          <a href="tel:1300590505">1300 590 505</a>
+          <a href="mailto:enquiries@cotewell.com.au">enquiries@cotewell.com.au</a>
+        </div>
       </div>
     </div>
+
+    <!-- Main nav row -->
     <div class="shell main-nav">
-      <a class="brand" href="https://cotewell.com.au/" aria-label="Cotewell home">
-        <img class="brand-logo" src="assets/img/cotewell-logo.jpeg" alt="Cotewell" width="134" height="150">
+      <a class="brand" href="/" aria-label="Cotewell home">
+        <img src="assets/media/cotewell-logo.jpeg" alt="Cotewell">
       </a>
-      <nav class="primary-nav" id="primary-nav" aria-label="Primary navigation">
-        <a href="https://cotewell.com.au/service/floor-coating-and-sealing/">Floor coating</a>
-        <a href="https://cotewell.com.au/service/line-markings/">Line marking</a>
-        <a href="https://cotewell.com.au/industrial-floor-resurfacing/">Floor resurfacing</a>
-        <a href="https://cotewell.com.au/product-category/tape/">Tape &amp; shapes</a>
-        <a href="#category" aria-current="page" data-category-link>Projectors</a>
-        <a href="https://cotewell.com.au/cost-calculator/">Cost calculator</a>
+      <nav class="primary" id="primary-menu" aria-label="Primary navigation">
+        <a href="/service/floor-coating-and-sealing/">Floor Coating</a>
+        <a href="/service/line-markings/">Line Marking</a>
+        <a href="/product-category/line-marking-projector/">Projectors</a>
+        <a href="/product-category/tape/">Line Marking Tape</a>
+        <a href="/cost-calculator/">Pricing</a>
       </nav>
       <div class="nav-actions">
-        <a class="cart-link" href="https://cotewell.com.au/cart/" aria-label="Cart, 0 items" data-cart-link>
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8h12l-1.2 12H7.2L6 8z"></path><path d="M9 8V6a3 3 0 0 1 6 0v2"></path></svg>
-          <span>Cart</span><b data-cart-count>0</b>
+        <a class="cart-link" href="/cart/" aria-label="Cart, 0 items">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M6 8h12l-1.2 12H7.2L6 8z"></path>
+            <path d="M9 8V6a3 3 0 0 1 6 0v2"></path>
+          </svg>
+          <span>Cart</span><b>0</b>
         </a>
-        <a class="button button--red header-cta" href="https://cotewell.com.au/request-quote/">Request a Quote</a>
+        <a class="button button--red header-cta" href="/request-quote/">Request a Quote</a>
+        <!-- Mobile hamburger (hidden on desktop via CSS) -->
+        <button class="menu-toggle" aria-expanded="false" aria-controls="primary-menu">Menu</button>
       </div>
     </div>
+
   </header>
 
   <main id="main">
@@ -172,7 +179,7 @@
               <p class="mono">Toll &middot; projected warning signs</p>
               <h3>Projected warning signs at Toll.</h3>
               <p>52 sensor-activated Signum STOP signs at Toll’s Kemps Creek warehouse.</p>
-              <a class="text-link text-link--dark" href="https://cotewell.com.au/case-study-projected-warning-signs-at-a-toll-warehouse/">Read the customer story</a>
+              <a class="button button--red" href="https://cotewell.com.au/case-study-projected-warning-signs-at-a-toll-warehouse/">READ THE CASE STUDY</a>
             </div>
             <div class="story-band__stats">
               <div><strong>50,000 hr</strong><span>LED life-span</span></div>
@@ -321,7 +328,7 @@
         </div>
 
         <div class="project-grid">
-          <a class="project-card reveal" href="https://cotewell.com.au/case-study-projected-warning-signs-at-a-toll-warehouse/">
+          <a class="project-card reveal" href="https://cotewell.com.au/projector-customer-story/">
             <div class="project-card__media"><img src="https://cotewell.com.au/wp-content/uploads/2023/04/Projected-Line-Example.jpg" alt="Bright projected safety line running down a warehouse aisle" loading="lazy"><span>Read the story</span></div>
             <div class="project-card__copy"><p class="mono">Warehouse · projected line marking</p><h3>Paint wore away. Tape chipped. Projection held.</h3><span class="text-link">Read the customer story</span></div>
           </a>
@@ -368,41 +375,108 @@
   </main>
 
   <footer class="site-footer">
+
+    <!-- Link columns grid -->
     <div class="shell footer-grid">
-      <div>
-        <a class="brand brand--footer" href="https://cotewell.com.au/">
-          <img class="brand-logo brand-logo--footer" src="assets/img/cotewell-logo.jpeg" alt="Cotewell" width="134" height="150">
+      <div class="footer-brand">
+        <a class="brand brand--footer" href="/">
+          <img class="brand-logo brand-logo--footer"
+            src="assets/media/cotewell-logo.jpeg"
+            alt="Cotewell" width="134" height="150">
         </a>
-        <p>Industrial flooring and line-marking products for safer, clearer workplaces.</p>
+        <p>Industrial flooring, line marking and<br>workplace safety solutions for industrial sites.</p>
+        <div class="footer-contact">
+          <a href="tel:1300590505">1300 590 505</a>
+          <a href="mailto:enquiries@cotewell.com.au">enquiries@cotewell.com.au</a>
+        </div>
       </div>
+
       <div>
-        <strong class="mono">Line marking</strong>
-        <a href="https://cotewell.com.au/service/line-markings/">Line-marking solutions</a>
-        <a href="#category" data-category-link>Line marking &amp; safety sign projectors</a>
-        <a href="https://cotewell.com.au/shop/">Shop products</a>
+        <strong class="mono">Services</strong>
+        <a href="/service/floor-coating-and-sealing/">Floor Coating</a>
+        <a href="/service/line-markings/">Line Marking</a>
+        <a href="/product-category/line-marking-projector/">Projectors</a>
+        <a href="/concrete-repair/">Concrete Repair</a>
       </div>
+
       <div>
-        <strong class="mono">Buyer resources</strong>
-        <a href="https://cotewell.com.au/video-gallery/">Project videos</a>
-        <a href="https://cotewell.com.au/learning-centre/">Learning centre</a>
-        <a href="https://cotewell.com.au/cost-calculator/">Cost calculator</a>
+        <strong class="mono">Shop</strong>
+        <a href="/product-category/tape/">Line Marking Tape</a>
+        <a href="/product-category/shapes/">5S Shapes &amp; Footprints</a>
+        <a href="/product-category/signage/">Floor Signage</a>
+        <a href="/request-free-sample/">Free Samples</a>
       </div>
+
       <div>
-        <strong class="mono">Contact</strong>
-        <a href="tel:1300590505">1300 590 505</a>
-        <a href="mailto:enquiries@cotewell.com.au">enquiries@cotewell.com.au</a>
-        <a href="https://cotewell.com.au/cart/">View cart</a>
+        <strong class="mono">Company</strong>
+        <a href="/our-story/">About Us</a>
+        <a href="/learning-centre/#articles">Articles</a>
+        <a href="/video-gallery/">Case Studies</a>
+        <a href="/video-gallery/">Videos</a>
+        <a href="/request-free-sample/">Free Tape Samples</a>
+      </div>
+
+      <div>
+        <strong class="mono">Where We Work</strong>
+        <a href="#">Brisbane &amp; QLD</a>
+        <a href="#">Sydney &amp; NSW</a>
+        <a href="#">Melbourne &amp; VIC</a>
+        <a href="/cost-calculator/">Cost Guide</a>
+        <a href="#">Common Questions</a>
       </div>
     </div>
-    <div class="shell footer-bottom"><span>© 2026 Cotewell</span><span data-footer-label>Line marking &amp; safety sign projectors mock-up</span></div>
+
+    <!-- Social icons -->
+    <div class="shell footer-socials">
+      <a href="#" aria-label="Facebook">
+        <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2"
+          fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+        </svg>
+      </a>
+      <a href="#" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2"
+          fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+          <rect x="2" y="9" width="4" height="12"></rect>
+          <circle cx="4" cy="4" r="2"></circle>
+        </svg>
+      </a>
+      <a href="#" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2"
+          fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+          <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+          <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+        </svg>
+      </a>
+      <a href="#" aria-label="YouTube">
+        <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2"
+          fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33 2.78 2.78 0 0 0 1.94 2c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.33 29 29 0 0 0-.46-5.33z"></path>
+          <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+        </svg>
+      </a>
+    </div>
+
+    <!-- Bottom bar -->
+    <div class="shell footer-bottom">
+      <span>© 2026 Cotewell.</span>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+      </div>
+    </div>
+
   </footer>
 
-  <aside class="sticky-cta" data-sticky-cta aria-label="Projector quick purchase" aria-hidden="true">
+  <aside class="sticky-cta" data-sticky-cta
+    aria-label="Quick actions" aria-hidden="true">
     <div class="shell sticky-cta__inner">
-      <span class="sticky-cta__prompt" data-sticky-label>Delta FieldLAS · $2,400.00 + GST</span>
+      <span class="sticky-cta__prompt">Plan your project</span>
       <div class="sticky-cta__actions">
-        <a class="button button--outline" href="tel:1300590505">Call before purchase</a>
-        <a class="button button--red" href="#delta-fieldlas-buy" data-sticky-add>Add to cart <span>↗</span></a>
+        <a class="button button--red" href="/request-quote/">Request a Quote <span>↗</span></a>
+        <a class="button button--outline" href="tel:1300590505">Call 1300 590 505 <span>→</span></a>
       </div>
     </div>
   </aside>
