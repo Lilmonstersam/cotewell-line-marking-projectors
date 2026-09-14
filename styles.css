@@ -1431,64 +1431,43 @@ h1, h2, h3 { font-family: "Big John", sans-serif; }
 /* =========================================================================
    Projectors in action
    ========================================================================= */
+.action-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.action-card {
+  display: flex; flex-direction: column; overflow: hidden;
+  border: 1px solid rgba(0,0,0,.2); background: var(--white);
+  transition: transform 190ms ease, box-shadow 190ms ease;
+}
+.action-card:hover { transform: translateY(-5px); box-shadow: 0 18px 40px rgba(0,0,0,.12); }
+.action-card__media { height: 190px; overflow: hidden; background: #08090a; }
+.action-card__media img { width: 100%; height: 100%; object-fit: cover; transition: transform 400ms ease; }
+.action-card:hover .action-card__media img { transform: scale(1.05); }
+.action-card__copy { display: flex; flex: 1; flex-direction: column; padding: 20px; }
+.action-card__copy .mono { margin: 0 0 10px; color: var(--signal); }
+.action-card__copy h3 { margin: 0 0 10px; font-size: 18px; line-height: 1.15; letter-spacing: -.01em; }
+.action-card__copy > p:not(.mono) { margin: 0 0 16px; color: rgba(0,0,0,.72); font-size: 16px; line-height: 1.55; }
+.action-card__copy .text-link { margin-top: auto; align-self: flex-start; font-size: 13px; }
 
 /* Customer-story band */
-/* One banner carries the whole section: the Toll story and its highlights on
-   the left, the four linked reads on the right. */
 .story-band {
   position: relative;
   isolation: isolate;
   display: grid;
-  grid-template-columns: 1fr .95fr;
-  gap: 48px;
-  align-items: stretch;
+  grid-template-columns: 1.35fr .65fr;
+  gap: 44px;
+  align-items: center;
   overflow: hidden;
   margin-top: 22px;
-  padding: 36px 34px;
+  padding: 32px 34px;
   border: 1px solid rgba(0,0,0,.18);
   background: linear-gradient(140deg, #ffffff 0%, #f7f6f2 60%, #eeece6 100%);
 }
-.story-band__copy { display: flex; flex-direction: column; }
 .story-band__copy .mono { margin: 0 0 10px; color: var(--red); }
-.story-band__copy .button { align-self: flex-start; }
 .story-band__copy h3 { margin: 0 0 12px; font-size: 26px; line-height: 1.1; letter-spacing: -.02em; }
-.story-band__copy > p:not(.mono) { margin: 0 0 20px; color: rgba(0,0,0,.75); font-size: 17px; line-height: 1.6; max-width: 62ch; }
-
-/* Project highlights, now sitting under the case-study CTA */
-.story-band__stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: auto; padding-top: 32px; }
+.story-band__copy p { margin: 0 0 16px; color: rgba(0,0,0,.75); font-size: 17px; line-height: 1.6; max-width: 62ch; }
+.story-band__stats { display: grid; gap: 10px; }
 .story-band__stats div { padding: 12px 16px; border-left: 3px solid var(--red); background: rgba(255,255,255,.75); }
-.story-band__stats strong { display: block; font-size: 22px; letter-spacing: -.02em; }
-.story-band__stats span { color: rgba(0,0,0,.62); font-size: 12px; letter-spacing: .1em; text-transform: uppercase; }
-
-/* Right column: the four reads that used to be the card grid */
-.story-band__links { border-top: 1px solid rgba(0,0,0,.16); }
-.story-band__links-head { margin: 14px 0 4px; color: rgba(0,0,0,.5); }
-.action-link {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-  padding: 16px 0;
-  border-bottom: 1px solid rgba(0,0,0,.12);
-  color: inherit;
-  transition: padding-left 180ms ease, border-color 180ms ease;
-}
-.action-link:first-child { border-top: 1px solid rgba(0,0,0,.12); }
-.action-link__text { display: flex; flex-direction: column; gap: 5px; }
-.action-link__tag { color: var(--signal); }
-.action-link__title {
-  font-family: "Big John", sans-serif;
-  font-size: 16px;
-  font-weight: 800;
-  line-height: 1.2;
-  letter-spacing: -.01em;
-  text-transform: uppercase;
-}
-.action-link__cue { color: rgba(0,0,0,.58); font-size: 13px; }
-.action-link__arrow { flex: none; color: var(--red); font-size: 18px; transition: transform 180ms ease; }
-.action-link:hover, .action-link:focus-visible { padding-left: 10px; border-color: var(--red); }
-.action-link:hover .action-link__arrow, .action-link:focus-visible .action-link__arrow { transform: translateX(4px); }
-.action-link:focus-visible { outline: 2px solid var(--red); outline-offset: 3px; }
+.story-band__stats strong { display: block; font-family: "Archivo", sans-serif; font-size: 22px; letter-spacing: -.02em; }
+.story-band__stats span { color: rgba(0,0,0,.62); font-family: "IBM Plex Mono", monospace; font-size: 12px; letter-spacing: .1em; text-transform: uppercase; }
 
 /* =========================================================================
    FAQ
@@ -1556,13 +1535,14 @@ h1, h2, h3 { font-family: "Big John", sans-serif; }
 
 @media (max-width: 1000px) {
   .tape-grid { grid-template-columns: repeat(2, 1fr); }
-  .story-band { grid-template-columns: 1fr; gap: 30px; }
+  .action-grid { grid-template-columns: repeat(2, 1fr); }
+  .story-band { grid-template-columns: 1fr; gap: 24px; }
+  .story-band__stats { grid-template-columns: repeat(3, 1fr); }
 }
 @media (max-width: 700px) {
-  .tape-grid { grid-template-columns: 1fr; }
+  .tape-grid, .action-grid { grid-template-columns: 1fr; }
   .story-band { padding: 22px 18px; }
   .story-band__stats { grid-template-columns: 1fr; }
-  .action-link { gap: 14px; }
   .product-photo { width: 92px; height: 60px; }
   .spec-strip { grid-template-columns: 1fr; gap: 6px; }
   .spec-strip span { min-height: 58px; }

@@ -406,20 +406,13 @@
       body.dataset.rendered = '1';
     }
 
-    // The four action entries now live inside the Toll story band as a linked
-    // list, so the section carries one banner instead of a card grid.
-    var action = document.querySelector('[data-action-links]');
+    var action = document.querySelector('[data-action-grid]');
     if (action && !action.dataset.rendered) {
       action.innerHTML = ACTION_CARDS.map(function (c) {
-        var external = /^https?:/.test(c.href);
-        return '<a class="action-link" href="' + c.href + '"' +
-          (external ? ' target="_blank" rel="noopener"' : '') + '>' +
-          '<span class="action-link__text">' +
-            '<span class="mono action-link__tag">' + c.tag + '</span>' +
-            '<span class="action-link__title">' + c.title + '</span>' +
-            '<span class="action-link__cue">' + c.link + '</span>' +
-          '</span>' +
-          '<span class="action-link__arrow" aria-hidden="true">&#8594;</span>' +
+        return '<a class="action-card reveal" href="' + c.href + '">' +
+          '<div class="action-card__media"><img src="' + c.img + '" alt="' + c.alt + '" loading="lazy"></div>' +
+          '<div class="action-card__copy"><p class="mono">' + c.tag + '</p><h3>' + c.title + '</h3>' +
+          '<p>' + c.copy + '</p><span class="text-link text-link--dark">' + c.link + '</span></div>' +
         '</a>';
       }).join('');
       action.dataset.rendered = '1';
