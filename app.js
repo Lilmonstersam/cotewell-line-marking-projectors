@@ -297,12 +297,12 @@
       link: 'View the Product'
     },
     {
-      img: 'assets/img/unknown-project-pics-toll-3.jpg',
-      alt: 'Projected pedestrian crossing marked onto an outdoor surface',
-      tag: 'Pedestrian crossings',
-      title: 'Projected warning signs at Toll',
-      copy: '52 sensor-activated Signum STOP signs at Toll’s Kemps Creek warehouse.',
-      href: 'https://cotewell.com.au/case-study-projected-warning-signs-at-a-toll-warehouse/',
+      img: 'assets/img/mightyline-marking-tape.jpg',
+      alt: 'Durable MightyLine floor marking tape in an industrial warehouse',
+      tag: 'Customer story',
+      title: 'This Customer Tried Everything',
+      copy: 'A warehouse tested multiple marking systems before choosing a more durable solution.',
+      href: 'https://cotewell.com.au/customer-story-this-customer-tried-everything/',
       link: 'Read the customer story'
     },
     {

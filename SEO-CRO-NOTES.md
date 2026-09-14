@@ -1,5 +1,11 @@
 # Line marking and safety sign projectors: SEO and CRO notes
 
+## Revision: 14 September 2026
+
+- Replaced the **Pedestrian crossings** card in **Projectors in action** with the **This Customer Tried Everything** customer story, including its title, warehouse summary, MightyLine image and live URL.
+- Kept the separate Toll projected-warning-signs banner below the cards unchanged.
+- Audited type sizes: no rendered text is set below 12px. Labels and supporting UI use 12px; body copy begins at 20.16px.
+
 Research updated: 14 August 2026  
 Market: Australia  
 Category target: `https://cotewell.com.au/product-category/line-marking-projector/`  
