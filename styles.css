@@ -1426,6 +1426,12 @@ h1, h2, h3 { font-family: "Big John", sans-serif; }
 .compare-note { margin: 20px 0 0; color: rgba(255,255,255,.72); font-size: 17px; line-height: 1.55; }
 .compare-hint { display: none; margin: 10px 0 0; color: rgba(255,255,255,.5); font-family: "IBM Plex Mono", monospace; font-size: 12px; letter-spacing: .1em; text-transform: uppercase; }
 @media (max-width: 900px) { .compare-hint { display: block; } }
+@media (max-width: 600px) {
+  .compare-table th, .compare-table td { padding: 12px 10px; font-size: 14px; }
+  .compare-table tbody th { min-width: 120px; font-size: 14px; }
+  .compare-table td.num { font-size: 14px; }
+  .compare-table thead th { font-size: 11px; }
+}
 .visually-hidden { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
 
 /* =========================================================================
