@@ -297,7 +297,7 @@
       link: 'View the Product'
     },
     {
-      img: 'assets/img/mightyline-marking-tape.jpg',
+      img: 'https://cotewell.com.au/wp-content/uploads/2026/07/Projected-Crossing-Stop-Sign-scaled.jpg',
       alt: 'Durable MightyLine floor marking tape in an industrial warehouse',
       tag: 'Customer story',
       title: 'This Customer Tried Everything',
@@ -328,20 +328,20 @@
   /* Video library, split so the pros/cons pair reads as a pair and the two
      shorts sit alongside them. Orientation drives the thumbnail aspect. */
   var VIDEOS = [
-    { id: 'BtRwiznpibk', href: 'https://www.youtube.com/watch?v=BtRwiznpibk',
-      tag: 'The case for', format: 'Video',
+    { src: 'https://cotewell.com.au/wp-content/uploads/2026/10/Pros-of-Our-Laser-Line-Marking-Safety-Signage-Projectors-Cotewell-AU.mp4',
+      tag: 'The case for', format: 'Video', portrait: false,
       title: "Pro's of Our Laser Line Marking & Safety Signage Projectors",
       copy: 'Where projection outperforms paint and tape, and the sites that get the most out of it.' },
-    { id: 'AguKdMXljAg', href: 'https://www.youtube.com/watch?v=AguKdMXljAg',
-      tag: 'The case against', format: 'Video',
+    { src: 'https://cotewell.com.au/wp-content/uploads/2026/10/Cons-of-Our-Laser-Line-Marking-Safety-Signage-Projectors-Cotewell-AU.mp4',
+      tag: 'The case against', format: 'Video', portrait: false,
       title: "Con's of Our Laser Line Marking & Safety Signage Projectors",
       copy: 'The honest limitations: sunlight, projection range, electrical work and where a projector is the wrong call.' },
-    { id: '42TXkCO9rMs', href: 'https://youtube.com/shorts/42TXkCO9rMs',
-      tag: 'Activated projection', format: 'Short', portrait: true,
+    { src: 'https://cotewell.com.au/wp-content/uploads/2026/10/Activated-Projector-Markings-For-Busy-Warehouses-Cotewell-AU.mp4',
+      tag: 'Activated projection', format: 'Video', portrait: false,
       title: 'Activated Projector Markings | For Busy Warehouses',
       copy: 'The marking appears the moment a forklift or pedestrian is detected, then clears once the area is empty.' },
-    { id: 'n4VH_JL10y4', href: 'https://youtube.com/shorts/n4VH_JL10y4',
-      tag: 'Motion sensor', format: 'Short', portrait: true,
+    { src: 'https://cotewell.com.au/wp-content/uploads/2026/10/Signum-warning-sign-projector-motion-sensor.mp4',
+      tag: 'Motion sensor', format: 'Video', portrait: false,
       title: 'Signum Warning Sign Projector | Motion Sensor',
       copy: 'A Signum warning sign triggered by motion, so the message only lands when there is something to warn about.' }
   ];
@@ -358,7 +358,7 @@
     { q: 'Can they handle a harsh industrial environment?',
       a: 'The Signum units are IP65 protection rated for harsh industrial environments and are suitable for high and low temperature applications. The Delta FieldLAS carries an IP67-rated enclosure and integrated heating control. Both are built for dusty, dirty and wet conditions.' },
     { q: 'What are the limitations we should know about?',
-      a: 'They are not suitable for applications in full sunlight. Each unit has a defined projection range, so larger or more complex sites may need multiple units. Hard wiring must be completed by a qualified electrician, and additional electrical infrastructure may be required. Every projection system is customised to suit the workplace, so there is no one size fits all.' },
+      a: 'They are not suitable for applications in full sunlight. Each unit has a defined projection range, so larger or more complex sites may need multiple units. Hard wiring must be completed by a qualified electrician, and additional electrical infrastructure may be required.' },
     { q: 'How much downtime does installation cause?',
       a: 'There is minimal downtime during installation. There is no curing time to wait out, so operations continue much as normal. Signum units also need minimal ongoing maintenance, which is why we describe them as fit and forget.' },
     { q: 'Do I need a GOBO?',
@@ -421,21 +421,46 @@
     var videos = document.querySelector('[data-video-grid]');
     if (videos && !videos.dataset.rendered) {
       videos.innerHTML = VIDEOS.map(function (v) {
-        return '<a class="video-card reveal' + (v.portrait ? ' video-card--short' : '') + '" href="' + v.href + '" target="_blank" rel="noopener">' +
-          '<span class="video-card__media">' +
-            '<img src="https://i.ytimg.com/vi/' + v.id + '/hqdefault.jpg" alt="" loading="lazy">' +
-            '<span class="video-card__shade" aria-hidden="true"></span>' +
-            '<span class="video-card__play" aria-hidden="true">&#9654;</span>' +
-            '<span class="video-card__format mono">' + v.format + '</span>' +
+        return '<div class="video-card reveal' + (v.portrait ? ' video-card--short' : '') + '">' +
+          '<span class="video-card__media" data-video-src="' + v.src + '" style="cursor:pointer;">' +
+            '<video src="' + v.src + '" preload="metadata" style="width:100%;height:100%;object-fit:' + (v.portrait ? 'contain' : 'cover') + ';display:block;"></video>' +
+            '<span class="video-card__shade video-overlay" aria-hidden="true"></span>' +
+            '<span class="video-card__play video-overlay" aria-hidden="true">&#9654;</span>' +
+            '<span class="video-card__format mono video-overlay">' + v.format + '</span>' +
           '</span>' +
           '<span class="video-card__copy">' +
             '<span class="mono">' + v.tag + '</span>' +
             '<b>' + v.title + '</b>' +
             '<span class="video-card__blurb">' + v.copy + '</span>' +
-            '<span class="text-link text-link--dark">Watch on YouTube &#8599;</span>' +
-          '</span></a>';
+          '</span></div>';
       }).join('');
       videos.dataset.rendered = '1';
+
+      var modal = document.getElementById('video-modal');
+      var modalVideo = document.getElementById('modal-video-player');
+      var closeBtn = document.querySelector('.video-modal__close');
+      var backdrop = document.querySelector('.video-modal__backdrop');
+
+      function closeModal() {
+        modal.classList.remove('is-open');
+        modalVideo.pause();
+        modalVideo.src = '';
+      }
+
+      if (modal) {
+        closeBtn.addEventListener('click', closeModal);
+        backdrop.addEventListener('click', closeModal);
+        
+        var mediaElements = videos.querySelectorAll('.video-card__media');
+        for (var i = 0; i < mediaElements.length; i++) {
+          mediaElements[i].addEventListener('click', function() {
+            var src = this.getAttribute('data-video-src');
+            modalVideo.src = src;
+            modal.classList.add('is-open');
+            modalVideo.play();
+          });
+        }
+      }
     }
 
     var faq = document.querySelector('[data-faq-list]');
