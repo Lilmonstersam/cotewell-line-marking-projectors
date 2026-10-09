@@ -139,7 +139,7 @@ h3 {
 }
 
 .mono {
-  font-family: "Open Sans", monospace;
+  font-family: "Open Sans", sans-serif;
   font-size: 12px;
   font-weight: 500;
   letter-spacing: 0.12em;
@@ -152,7 +152,7 @@ h3 {
   gap: 12px;
   margin: 0 0 18px;
   color: rgba(255, 255, 255, 0.76);
-  font-family: "Open Sans", monospace;
+  font-family: "Open Sans", sans-serif;
   font-size: 12px;
   font-weight: 500;
   letter-spacing: 0.14em;
@@ -284,7 +284,7 @@ h3 {
   background: var(--paper);
   color: #111;
   border-bottom: 1px solid var(--line-dark);
-  font-family: "IBM Plex Mono", monospace;
+  font-family: "Open Sans", sans-serif;
   font-size: 12px;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -724,7 +724,7 @@ h3 {
 
 .hero-proof__card strong {
   color: var(--white);
-  font-family: "Archivo", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 20px;
   line-height: 1;
   letter-spacing: -.025em;
@@ -732,7 +732,7 @@ h3 {
 
 .hero-proof__card span {
   color: rgba(255, 255, 255, .62);
-  font-family: "IBM Plex Mono", monospace;
+  font-family: "Open Sans", sans-serif;
   font-size: 12px;
   line-height: 1.3;
   letter-spacing: .08em;
@@ -842,7 +842,7 @@ h3 {
   border: 1px solid rgba(255, 255, 255, .22);
   background: rgba(0, 0, 0, .58);
   color: rgba(255, 255, 255, .78);
-  font-family: "IBM Plex Mono";
+  font-family: "Open Sans", sans-serif;
   font-size: 12px;
   letter-spacing: .1em;
   text-transform: uppercase;
@@ -885,7 +885,7 @@ h3 {
 }
 
 .category-product-card__footer strong {
-  font-family: "Archivo";
+  font-family: "Open Sans", sans-serif;
   font-size: 14px;
   text-transform: uppercase;
 }
@@ -988,7 +988,7 @@ h3 {
   border: 1px solid rgba(255, 255, 255, .22);
   background: rgba(0, 0, 0, .5);
   color: rgba(255, 255, 255, .72);
-  font-family: "IBM Plex Mono";
+  font-family: "Open Sans", sans-serif;
   font-size: 12px;
   letter-spacing: .11em;
   text-transform: uppercase;
@@ -1046,7 +1046,7 @@ h3 {
   border: 1px solid var(--line-light);
   background: rgba(255, 255, 255, .04);
   color: rgba(255, 255, 255, .52);
-  font-family: "IBM Plex Mono", monospace;
+  font-family: "Open Sans", sans-serif;
   font-size: 12px;
   letter-spacing: .08em;
   line-height: 1.25;
@@ -1056,7 +1056,7 @@ h3 {
 .spec-strip b {
   overflow-wrap: anywhere;
   color: var(--white);
-  font-family: "Archivo", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 15px;
   letter-spacing: -.01em;
   line-height: 1.1;
@@ -1079,14 +1079,14 @@ h3 {
 .price>span {
   margin-right: auto;
   color: rgba(255, 255, 255, .52);
-  font-family: "IBM Plex Mono";
+  font-family: "Open Sans", sans-serif;
   font-size: 12px;
   letter-spacing: .1em;
   text-transform: uppercase;
 }
 
 .price strong {
-  font-family: "Archivo";
+  font-family: "Open Sans", sans-serif;
   font-size: 30px;
   letter-spacing: -.03em;
 }
@@ -1188,9 +1188,10 @@ h3 {
   margin-bottom: 46px;
 }
 
-.section-head h2 {
+.section-head h2,
+.faq-intro h2 {
   margin: 0;
-  font-size: clamp(42px, 4.5vw, 64px);
+  font-size: 68px;
   line-height: .96;
   letter-spacing: -.04em;
   text-transform: uppercase;
@@ -1240,7 +1241,7 @@ h3 {
   border-radius: 50%;
   background: var(--red);
   color: #fff;
-  font-family: "IBM Plex Mono", monospace;
+  font-family: "Open Sans", sans-serif;
   font-size: 12px;
   letter-spacing: 0;
 }
@@ -1345,7 +1346,7 @@ h3 {
   padding: 8px 10px;
   background: var(--red);
   color: #fff;
-  font-family: "IBM Plex Mono";
+  font-family: "Open Sans", sans-serif;
   font-size: 12px;
   letter-spacing: .08em;
   text-transform: uppercase;
@@ -1415,7 +1416,7 @@ h3 {
   left: 18px;
   bottom: 16px;
   color: rgba(255, 255, 255, .55);
-  font-family: "IBM Plex Mono";
+  font-family: "Open Sans", sans-serif;
   font-size: 12px;
   letter-spacing: .1em;
 }
@@ -2019,8 +2020,9 @@ h3 {
     margin-bottom: 32px;
   }
 
-  .section-head h2 {
-    font-size: clamp(36px, 11vw, 50px);
+  .section-head h2,
+  .faq-intro h2 {
+    font-size: 68px;
   }
 
   .section-head>p {
@@ -2139,13 +2141,13 @@ h3 {
 
 .sample-band h2 {
   margin: 0;
-  font-size: clamp(32px, 3.6vw, 46px);
+  font-size: 68px;
   line-height: .98;
   letter-spacing: -.035em;
   text-transform: uppercase;
 }
 
-.sample-band p {
+.sample-band p:not(.eyebrow) {
   max-width: 62ch;
   margin: 14px 0 0;
   color: rgba(255, 255, 255, .84);
@@ -2281,7 +2283,7 @@ h3 {
   border-radius: 4px;
   background: var(--white);
   color: #1a1a1a;
-  font-family: "Archivo", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 13px;
   font-weight: 800;
   letter-spacing: -.02em;
@@ -2424,7 +2426,7 @@ h3 {
 }
 
 .sample-band__inner>div>p {
-  font-size: 19px;
+  font-size: 12px;
   line-height: 1.55;
 }
 
@@ -2639,7 +2641,7 @@ h3 {
 }
 
 .tape-card__footer strong {
-  font-family: "Archivo", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 15px;
   text-transform: uppercase;
 }
@@ -2696,7 +2698,7 @@ h3 {
   border-bottom: 1px solid rgba(255, 255, 255, .28);
   background: #17191b;
   color: rgba(255, 255, 255, .72);
-  font-family: "IBM Plex Mono", monospace;
+  font-family: "Open Sans", sans-serif;
   font-size: 12px;
   font-weight: 500;
   letter-spacing: .1em;
@@ -2720,7 +2722,7 @@ h3 {
   min-width: 210px;
   background: #0d0e0f;
   box-shadow: 1px 0 0 rgba(255, 255, 255, .12);
-  font-family: "Archivo", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 16px;
   font-weight: 800;
   line-height: 1.15;
@@ -2788,7 +2790,7 @@ h3 {
 }
 
 .compare-table td.num {
-  font-family: "Archivo", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 16px;
   font-weight: 800;
   color: var(--white);
@@ -2838,7 +2840,7 @@ h3 {
   display: none;
   margin: 10px 0 0;
   color: rgba(255, 255, 255, .5);
-  font-family: "IBM Plex Mono", monospace;
+  font-family: "Open Sans", sans-serif;
   font-size: 12px;
   letter-spacing: .1em;
   text-transform: uppercase;
@@ -2965,68 +2967,135 @@ h3 {
 
 /* Customer-story band */
 .story-band {
-  position: relative;
-  isolation: isolate;
   display: grid;
-  grid-template-columns: 1.35fr .65fr;
-  gap: 44px;
+  grid-template-columns: 1.1fr 0.9fr;
   align-items: center;
   overflow: hidden;
-  margin-top: 22px;
-  padding: 32px 34px;
-  border: 1px solid rgba(0, 0, 0, .18);
-  background: linear-gradient(140deg, #ffffff 0%, #f7f6f2 60%, #eeece6 100%);
+  margin-top: 40px;
+  background: #060606;
+  color: #fff;
+  padding: 0;
+  border: none;
 }
 
-.story-band__copy .mono {
-  margin: 0 0 10px;
-  color: var(--red);
+.story-band__media {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  min-height: 400px;
+}
+
+.story-band__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.story-band__media::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 30%;
+  background: linear-gradient(to right, transparent, #060606);
+}
+
+.story-band__copy {
+  padding: 50px 60px 50px 40px;
+}
+
+.story-band__eyebrow {
+  color: rgba(255, 255, 255, 0.5);
+  font-family: "Open Sans", sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin: 0 0 20px;
+  display: flex;
+  align-items: center;
+}
+
+.story-band__eyebrow span {
+  display: inline-block;
+  width: 20px;
+  height: 1px;
+  background-color: var(--red);
+  margin-right: 12px;
 }
 
 .story-band__copy h3 {
-  margin: 0 0 12px;
-  font-size: 26px;
-  line-height: 1.1;
-  letter-spacing: -.02em;
-}
-
-.story-band__copy p {
-  margin: 0 0 16px;
-  color: rgba(0, 0, 0, .75);
-  font-size: 17px;
-  line-height: 1.6;
-  max-width: 62ch;
-}
-
-.story-band__stats {
-  display: grid;
-  gap: 10px;
-}
-
-.story-band__stats div {
-  padding: 12px 16px;
-  border-left: 3px solid var(--red);
-  background: rgba(255, 255, 255, .75);
-}
-
-.story-band__stats strong {
-  display: block;
-  font-family: "Archivo", sans-serif;
-  font-size: 22px;
-  letter-spacing: -.02em;
-}
-
-.story-band__stats span {
-  color: rgba(0, 0, 0, .62);
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 12px;
-  letter-spacing: .1em;
+  font-family: "Big John", sans-serif;
+  font-size: 42px;
+  line-height: 1.05;
+  color: #fff;
+  margin: 0 0 20px;
   text-transform: uppercase;
+}
+
+.story-band__copy p:not(.story-band__eyebrow) {
+  color: rgba(255, 255, 255, 0.7);
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0 0 30px;
+  max-width: 65ch;
+}
+
+.story-band__details {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  padding: 24px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  margin-bottom: 30px;
+}
+
+.detail-col strong {
+  display: block;
+  font-family: "Big John", sans-serif;
+  font-size: 12px;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 12px;
+}
+
+.detail-col span {
+  display: block;
+  font-family: "Open Sans", sans-serif;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.6;
+}
+
+.story-band__btn {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  font-weight: bold;
 }
 
 /* =========================================================================
    FAQ
    ========================================================================= */
+.faq-grid {
+  display: grid;
+  grid-template-columns: .72fr 1.28fr;
+  gap: 90px;
+  align-items: start;
+}
+
+.faq-intro {
+  /* Let grid take care of layout */
+}
+
 .faq-list {
   border-top: 1px solid rgba(0, 0, 0, .2);
 }
@@ -3072,6 +3141,22 @@ h3 {
   font-size: 18px;
   line-height: 1.6;
 }
+
+.faq-item[open] p {
+  animation: faqSlideDown 0.3s ease-out forwards;
+}
+
+@keyframes faqSlideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 
 /* =========================================================================
    Product gallery + brochure CTA
@@ -3204,14 +3289,14 @@ h3 {
 }
 
 .brochure-cta__copy b {
-  font-family: "Archivo", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 14px;
   font-weight: 700;
 }
 
 .brochure-cta__copy small {
   color: rgba(255, 255, 255, .6);
-  font-family: "IBM Plex Mono", monospace;
+  font-family: "Open Sans", sans-serif;
   font-size: 12px;
   letter-spacing: .08em;
   text-transform: uppercase;
@@ -3236,13 +3321,32 @@ h3 {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .story-band {
+  .faq-grid {
     grid-template-columns: 1fr;
-    gap: 24px;
+    gap: 40px;
   }
 
-  .story-band__stats {
-    grid-template-columns: repeat(3, 1fr);
+  .story-band {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .story-band__media {
+    min-height: 250px;
+  }
+
+  .story-band__media::after {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: auto;
+    height: 40%;
+    width: 100%;
+    background: linear-gradient(to bottom, transparent, #060606);
+  }
+
+  .story-band__details {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -3254,10 +3358,14 @@ h3 {
   }
 
   .story-band {
-    padding: 22px 18px;
+    padding: 0;
   }
 
-  .story-band__stats {
+  .story-band__copy {
+    padding: 30px 20px 40px;
+  }
+
+  .story-band__details {
     grid-template-columns: 1fr;
   }
 
@@ -3384,7 +3492,7 @@ h3 {
   top: 18px;
   left: 18px;
   color: var(--white);
-  font-family: "IBM Plex Mono", monospace;
+  font-family: "Open Sans", sans-serif;
   font-size: 12px;
   letter-spacing: .12em;
   text-transform: uppercase;
@@ -3449,7 +3557,7 @@ h3 {
   position: relative;
   display: block;
   overflow: hidden;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 4 / 5;
   background: #000;
 }
 
@@ -3468,7 +3576,7 @@ h3 {
 /* A Short's thumbnail is a portrait frame inside a 4:3 file. Contain it so the
    whole frame stays readable while the card keeps the same footprint. */
 .video-card--short .video-card__media img {
-  object-fit: contain;
+  object-fit: cover;
 }
 
 .video-card__shade {
@@ -3523,7 +3631,7 @@ h3 {
 }
 
 .video-card__copy>b {
-  font-family: "Archivo", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 16px;
   font-weight: 800;
   line-height: 1.2;
@@ -3566,7 +3674,7 @@ h3 {
 
 .alt-card h3 {
   margin: 0 0 12px;
-  font-family: "Archivo", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 22px;
   line-height: 1.12;
   letter-spacing: -.025em;
@@ -3591,7 +3699,7 @@ h3 {
 .alt-card li {
   padding: 10px 0 0;
   color: var(--muted-dark);
-  font-family: "IBM Plex Mono", monospace;
+  font-family: "Open Sans", sans-serif;
   font-size: 12px;
   letter-spacing: .06em;
   text-transform: uppercase;
@@ -3676,13 +3784,13 @@ h3 {
 }
 
 .video-card__media {
-  aspect-ratio: 16/9;
+  aspect-ratio: 4 / 5;
 }
 
 .video-card__media img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
 }
 
 .hero-video__caption {

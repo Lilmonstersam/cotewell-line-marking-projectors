@@ -787,4 +787,14 @@
   } else {
     revealItems.forEach(function (item) { item.classList.add('is-visible'); });
   }
+
+  var heroVideo = document.querySelector('.hero-video__frame video');
+  if (heroVideo) {
+    heroVideo.addEventListener('timeupdate', function () {
+      if (heroVideo.currentTime >= 10) {
+        heroVideo.currentTime = 0;
+        heroVideo.play();
+      }
+    });
+  }
 })();
