@@ -328,22 +328,36 @@
   /* Video library, split so the pros/cons pair reads as a pair and the two
      shorts sit alongside them. Orientation drives the thumbnail aspect. */
   var VIDEOS = [
-    { src: 'https://cotewell.com.au/wp-content/uploads/2026/10/Pros-of-Our-Laser-Line-Marking-Safety-Signage-Projectors-Cotewell-AU.mp4',
-      tag: 'The case for', format: 'Video', portrait: false,
-      title: "Pro's of Our Laser Line Marking & Safety Signage Projectors",
-      copy: 'Where projection outperforms paint and tape, and the sites that get the most out of it.' },
-    { src: 'https://cotewell.com.au/wp-content/uploads/2026/10/Cons-of-Our-Laser-Line-Marking-Safety-Signage-Projectors-Cotewell-AU.mp4',
-      tag: 'The case against', format: 'Video', portrait: false,
-      title: "Con's of Our Laser Line Marking & Safety Signage Projectors",
-      copy: 'The honest limitations: sunlight, projection range, electrical work and where a projector is the wrong call.' },
-    { src: 'https://cotewell.com.au/wp-content/uploads/2026/10/Activated-Projector-Markings-For-Busy-Warehouses-Cotewell-AU.mp4',
-      tag: 'Activated projection', format: 'Video', portrait: false,
+    {
+      src: 'assets/video/signum-warning-sign-projector-motion-sensor.mp4',
+      youtube: 'https://www.youtube.com/shorts/n4VH_JL10y4',
+      thumb: 'https://i.ytimg.com/vi/n4VH_JL10y4/maxresdefault.jpg',
+      tag: 'PROJECTOR IN ACTION',
+      format: 'Short',
+      portrait: true,
+      title: 'Signum Warning Sign Projector with Motion Sensor',
+      copy: 'See how a motion-activated STOP sign projector alerts forklift drivers and pedestrians in high-risk zones to help prevent close calls in busy workplaces.'
+    },
+    {
+      src: 'assets/video/motion-activated-walkway-projector.mp4',
+      youtube: 'https://www.youtube.com/shorts/1iBq1RNY_bQ',
+      thumb: 'https://i.ytimg.com/vi/1iBq1RNY_bQ/maxresdefault.jpg',
+      tag: 'PROJECTOR IN ACTION',
+      format: 'Short',
+      portrait: true,
+      title: 'Motion-Activated Walkway Projector for Forklift & Pedestrian Safety',
+      copy: 'See how dynamic projection replaces worn-out painted lines by illuminating a walkway on sensor trigger to instantly warn approaching forklift drivers of crossing pedestrians.'
+    },
+    {
+      src: 'assets/video/activated-projector-markings-busy-warehouses.mp4',
+      youtube: 'https://www.youtube.com/shorts/42TXkCO9rMs',
+      thumb: 'https://i.ytimg.com/vi/42TXkCO9rMs/maxresdefault.jpg',
+      tag: 'PROJECTOR IN ACTION',
+      format: 'Short',
+      portrait: true,
       title: 'Activated Projector Markings | For Busy Warehouses',
-      copy: 'The marking appears the moment a forklift or pedestrian is detected, then clears once the area is empty.' },
-    { src: 'https://cotewell.com.au/wp-content/uploads/2026/10/Signum-warning-sign-projector-motion-sensor.mp4',
-      tag: 'Motion sensor', format: 'Video', portrait: false,
-      title: 'Signum Warning Sign Projector | Motion Sensor',
-      copy: 'A Signum warning sign triggered by motion, so the message only lands when there is something to warn about.' }
+      copy: 'The marking appears the moment a forklift or pedestrian is detected, then clears once the area is empty.'
+    }
   ];
 
   var FAQS = [
@@ -421,11 +435,14 @@
     var videos = document.querySelector('[data-video-grid]');
     if (videos && !videos.dataset.rendered) {
       videos.innerHTML = VIDEOS.map(function (v) {
+        var mediaHtml = v.thumb
+          ? '<img src="' + v.thumb + '" alt="' + v.title + '" loading="lazy">'
+          : '<video src="' + v.src + '#t=0.001" preload="metadata" muted playsinline webkit-playsinline style="width:100%;height:100%;object-fit:' + (v.portrait ? 'contain' : 'cover') + ';display:block;"></video>';
         return '<div class="video-card reveal' + (v.portrait ? ' video-card--short' : '') + '">' +
-          '<span class="video-card__media" data-video-src="' + v.src + '" style="cursor:pointer;">' +
-            '<video src="' + v.src + '" preload="metadata" style="width:100%;height:100%;object-fit:' + (v.portrait ? 'contain' : 'cover') + ';display:block;"></video>' +
+          '<span class="video-card__media" data-video-src="' + v.src + '" data-youtube-src="' + (v.youtube || '') + '" style="cursor:pointer;">' +
+            mediaHtml +
             '<span class="video-card__shade video-overlay" aria-hidden="true"></span>' +
-            '<span class="video-card__play video-overlay" aria-hidden="true">&#9654;</span>' +
+            '<span class="video-card__play video-overlay" aria-hidden="true"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>' +
             '<span class="video-card__format mono video-overlay">' + v.format + '</span>' +
           '</span>' +
           '<span class="video-card__copy">' +
@@ -438,13 +455,36 @@
 
       var modal = document.getElementById('video-modal');
       var modalVideo = document.getElementById('modal-video-player');
+      var modalYoutube = document.getElementById('modal-youtube-player');
+      var modalExternal = document.getElementById('modal-external-link');
+      var modalContent = modal ? modal.querySelector('.video-modal__content') : null;
       var closeBtn = document.querySelector('.video-modal__close');
       var backdrop = document.querySelector('.video-modal__backdrop');
 
+      function getYoutubeId(url) {
+        var m = (url || '').match(/(?:shorts\/|v=|youtu\.be\/|embed\/)([a-zA-Z0-9_-]{11})/);
+        return m ? m[1] : null;
+      }
+
       function closeModal() {
+        if (!modal) return;
         modal.classList.remove('is-open');
-        modalVideo.pause();
-        modalVideo.src = '';
+        if (modalYoutube) {
+          modalYoutube.src = '';
+          modalYoutube.style.display = 'none';
+        }
+        if (modalVideo) {
+          modalVideo.pause();
+          modalVideo.src = '';
+          modalVideo.style.display = 'none';
+        }
+        if (modalExternal) {
+          modalExternal.href = '';
+          modalExternal.style.display = 'none';
+        }
+        if (modalContent) {
+          modalContent.classList.remove('is-portrait');
+        }
       }
 
       if (modal) {
@@ -455,9 +495,37 @@
         for (var i = 0; i < mediaElements.length; i++) {
           mediaElements[i].addEventListener('click', function() {
             var src = this.getAttribute('data-video-src');
-            modalVideo.src = src;
+            var youtubeUrl = this.getAttribute('data-youtube-src') || src;
+
+            if (modalVideo && src) {
+              modalVideo.src = src;
+              modalVideo.style.display = 'block';
+              if (modalYoutube) {
+                modalYoutube.src = '';
+                modalYoutube.style.display = 'none';
+              }
+              if (modalContent) modalContent.classList.add('is-portrait');
+              modalVideo.currentTime = 0;
+              var playPromise = modalVideo.play();
+              if (playPromise && playPromise.catch) {
+                playPromise.catch(function () {});
+              }
+            } else if (youtubeUrl && modalYoutube) {
+              var ytid = getYoutubeId(youtubeUrl);
+              if (ytid) {
+                modalYoutube.setAttribute('referrerpolicy', 'strict-origin-when-cross-origin');
+                modalYoutube.src = 'https://www.youtube-nocookie.com/embed/' + ytid + '?autoplay=1&playsinline=1&rel=0&enablejsapi=1';
+                modalYoutube.style.display = 'block';
+                if (modalVideo) modalVideo.style.display = 'none';
+                if (modalContent) modalContent.classList.add('is-portrait');
+              }
+            }
+
+            if (modalExternal && youtubeUrl) {
+              modalExternal.href = youtubeUrl;
+              modalExternal.style.display = 'inline-flex';
+            }
             modal.classList.add('is-open');
-            modalVideo.play();
           });
         }
       }
@@ -691,9 +759,12 @@
       footerLabel.textContent = route.view === 'product' ? page.shortName + ' product page mock-up' : categoryData.footerText;
     }
 
-    if (stickyCta && route.view !== 'product') {
-      stickyCta.classList.remove('is-visible');
-      stickyCta.setAttribute('aria-hidden', 'true');
+    if (route.view === 'product') {
+      if (stickyLabel && page) stickyLabel.textContent = page.stickyText;
+      if (stickyCta && page) stickyCta.setAttribute('aria-label', page.shortName + ' quick purchase');
+    } else {
+      if (stickyLabel) stickyLabel.textContent = 'Plan your project';
+      if (stickyCta) stickyCta.setAttribute('aria-label', 'Quick actions');
     }
 
     if (route.section) {
@@ -741,12 +812,13 @@
 
   function updatePageUi() {
     ticking = false;
-    var y = window.scrollY || 0;
+    var y = window.scrollY || document.documentElement.scrollTop || 0;
 
     if (header) header.classList.toggle('is-hidden', y > lastY && y > 180);
 
-    if (hero && stickyCta) {
-      var show = activeView === 'product' && hero.getBoundingClientRect().bottom <= 0;
+    if (stickyCta) {
+      var SHOW_AFTER = 600;
+      var show = y > SHOW_AFTER;
       stickyCta.classList.toggle('is-visible', show);
       stickyCta.setAttribute('aria-hidden', String(!show));
     }
