@@ -79,7 +79,7 @@
       purchaseLabel: 'Unit price',
       purchaseValue: '$2,400.00',
       purchaseSuffix: '+ GST',
-      purchaseNote: 'Every application must be customised to suit the environment. Call <a href="tel:1300590505">1300 590 505</a> to discuss the options and arrange a free onsite demo before you order.',
+      purchaseNote: 'Every application must be customised to suit the environment. Call <a href="tel:1300590505">1300 590 505</a> to discuss the options. Not sure it\'s worth the investment? We can arrange a free onsite demo.',
       stickyText: 'Delta FieldLAS · $2,400.00 + GST',
       featuresTitle: 'A line that never<br>touches the floor.',
       featuresIntro: 'Nothing is applied to the concrete, so nothing wears, chips or fades. Every application is customised to suit the environment, so contact us before purchase to plan the projector, line position and installation.',
@@ -143,7 +143,7 @@
       purchaseLabel: 'Unit price',
       purchaseValue: '$3,200.00',
       purchaseSuffix: '+ GST',
-      purchaseNote: 'Each projector requires a GOBO. Call <a href="tel:1300590505">1300 590 505</a> before purchase to discuss GOBO options and arrange a free onsite demo.',
+      purchaseNote: 'Each projector requires a GOBO. Call <a href="tel:1300590505">1300 590 505</a> to discuss GOBO options. Not sure it\'s worth the investment? We can arrange a free onsite demo.',
       stickyText: 'Signum 75W · $3,200.00 + GST',
       featuresTitle: 'Bright on floors<br>that ruin markings.',
       featuresIntro: 'Projected markings stay visible regardless of floor cleanliness. We customise every projection system for the workplace layout and application, so contact us before purchase to plan the sign, mounting position and installation.',
@@ -208,7 +208,7 @@
       purchaseLabel: 'Unit price',
       purchaseValue: '$2,250.00',
       purchaseSuffix: '+ GST',
-      purchaseNote: 'Each projector requires a GOBO. Call <a href="tel:1300590505">1300 590 505</a> before purchase to discuss GOBO options and arrange a free onsite demo.',
+      purchaseNote: 'Each projector requires a GOBO. Call <a href="tel:1300590505">1300 590 505</a> to discuss GOBO options. Not sure it\'s worth the investment? We can arrange a free onsite demo.',
       stickyText: 'Signum 50W · $2,250.00 + GST',
       featuresTitle: 'Bright on floors<br>that ruin markings.',
       featuresIntro: 'Projected markings stay visible regardless of floor cleanliness. We customise every projection system for the workplace layout and application, so contact us before purchase to plan the sign, mounting position and installation.',
@@ -256,7 +256,7 @@
       description: 'Projects safety lines, warning signs and customised symbols for industrial sites.'
     },
     'signum-50w': {
-      href: '#signum-50w',
+      href: 'https://cotewell.com.au/signum-projected-safety-marking-australian-distributor/',
       route: 'signum-50w',
       image: 'assets/img/signum-50w.png',
       alt: 'Signum 50W projected safety marking system',
@@ -293,7 +293,7 @@
       tag: 'Projected line marking',
       title: 'Signum Projected Safety Marking – 50W',
       copy: 'There is nothing on the floor to wear away, so the line stays as bright on day one thousand as it was on day one.',
-      href: '#signum-50w',
+      href: 'https://cotewell.com.au/signum-projected-safety-marking-australian-distributor/',
       link: 'View the Product'
     },
     {
@@ -303,7 +303,7 @@
       title: 'This Customer Tried Everything',
       copy: 'A warehouse tested multiple marking systems before choosing a more durable solution.',
       href: 'https://cotewell.com.au/customer-story-this-customer-tried-everything/',
-      link: 'Read the customer story'
+      link: 'Read the article'
     },
     {
       img: UP + '2023/04/gobo-projekce-projection247-signage-znacky-e1757482151830.jpg',
@@ -312,7 +312,7 @@
       title: 'Activated Projectors: Improving Warehouse Safety with Real-Time Visual Warnings',
       copy: 'Sensors detect an approaching forklift or pedestrian and the warning appears on the ground, then clears once the area is empty.',
       href: 'https://cotewell.com.au/activated-projectors-improving-warehouse-safety-with-real-time-visual-warnings/',
-      link: 'How activated projectors work'
+      link: 'Read the article'
     },
     {
       img: UP + '2023/04/safety-signage_projection_idvum_signium.jpg',
@@ -321,7 +321,7 @@
       title: 'Pro’s & Con’s of our Laser Line Marking & Safety Signage Projectors',
       copy: 'Customised safety signs and symbols are available to suit the workplace, from exclusion zones to directional arrows and warning messages.',
       href: 'https://cotewell.com.au/pros-cons-of-our-laser-line-marking-safety-signage-projectors/',
-      link: 'Pros and cons of projectors'
+      link: 'Read the article'
     }
   ];
 
@@ -376,7 +376,7 @@
     { q: 'How much downtime does installation cause?',
       a: 'There is minimal downtime during installation. There is no curing time to wait out, so operations continue much as normal. Signum units also need minimal ongoing maintenance, which is why we describe them as fit and forget.' },
     { q: 'Do I need a GOBO?',
-      a: 'Each Signum projector needs to be purchased with a GOBO, which is the customised element that forms the projected image. Call 1300 590 505 before ordering so we can discuss GOBO options and arrange a free onsite demo. The Delta FieldLAS projects a laser line and does not use one.' }
+      a: 'Each Signum projector needs to be purchased with a GOBO, which is the customised element that forms the projected image. Call 1300 590 505 before ordering so we can discuss GOBO options. If you are unsure it is worth the investment, we can also arrange a free onsite demo. The Delta FieldLAS projects a laser line and does not use one.' }
   ];
 
   var productKeys = Object.keys(productData);
