@@ -294,7 +294,7 @@
       title: 'Signum Projected Safety Marking – 50W',
       copy: 'There is nothing on the floor to wear away, so the line stays as bright on day one thousand as it was on day one.',
       href: 'https://cotewell.com.au/signum-projected-safety-marking-australian-distributor/',
-      link: 'View the Product'
+      link: 'Read the Article'
     },
     {
       img: 'https://cotewell.com.au/wp-content/uploads/2026/07/Projected-Crossing-Stop-Sign-scaled.jpg',
