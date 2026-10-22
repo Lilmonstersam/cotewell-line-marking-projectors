@@ -3006,7 +3006,11 @@ h3 {
 
 .action-card__copy .text-link {
   margin-top: auto;
-  align-self: flex-start;
+  align-self: stretch;
+  box-sizing: border-box;
+  min-height: 48px;
+  padding-inline: 14px;
+  white-space: nowrap;
   font-size: 13px;
 }
 
