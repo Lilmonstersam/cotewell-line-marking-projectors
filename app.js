@@ -303,7 +303,7 @@
       title: 'This Customer Tried Everything',
       copy: 'A warehouse tested multiple marking systems before choosing a more durable solution.',
       href: 'https://cotewell.com.au/customer-story-this-customer-tried-everything/',
-      link: 'Read the article'
+      link: 'Read the Customer Story'
     },
     {
       img: UP + '2023/04/gobo-projekce-projection247-signage-znacky-e1757482151830.jpg',
